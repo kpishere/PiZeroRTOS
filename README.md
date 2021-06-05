@@ -25,3 +25,16 @@ I hope it proves to be a worthy foundation to greater things for you.
 * Attempt to save the Pi 3/4 examples that are copied but then transposed to Pi Zero where only Pi Zero is actively tested
 * Working build examples (built on a MacOS environment augmented by many gcc et. al. tools)
 
+# Some key requirements
+- https://www.qemu.org (download and build from github for the latest Pi Zero support, many distros don't include that)
+- Xcode 
+- xcode-select --install (command line tools)
+- https://github.com/ARMmbed/homebrew-formulae
+
+# Most usefull links
+- https://azeria-labs.com/writing-arm-assembly-part-1/
+- https://github.com/umanovskis/baremetal-arm
+- https://pnx9.github.io/thehive/Debugging-Linux-Kernel.html
+- https://github.com/dwelch67/raspberrypi
+- https://www.raspberrypi.org/documentation/hardware/raspberrypi/README.md
+- https://github.com/s-matyukevich/raspberry-pi-os
