@@ -19,7 +19,7 @@ I hope it proves to be a worthy foundation to greater things for you.
 * Interrupt handling
 * DMA (even if only used between SPI and Frame buffer)
 
-# What is is now
+# What it is now
 * UART working
 * bare metal booting
 * Attempt to save the Pi 3/4 examples that are copied but then transposed to Pi Zero where only Pi Zero is actively tested
