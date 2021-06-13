@@ -38,3 +38,7 @@ I hope it proves to be a worthy foundation to greater things for you.
 - https://github.com/dwelch67/raspberrypi
 - https://www.raspberrypi.org/documentation/hardware/raspberrypi/README.md
 - https://github.com/s-matyukevich/raspberry-pi-os
+
+# Update
+
+The project [embox](https://github.com/embox/embox) is hands-down everything this project aspires to be and more.  Regardless, this still has value as a tool for foundational understanding.  Also, I'd add for GUI and direct OpenGL rendering to framebuffer etc, the already embox-tested project [Nuklear](https://github.com/Immediate-Mode-UI/Nuklear) is ideal.
