@@ -25,8 +25,8 @@ void kernel_main(u32 r0, u32 r1, u32 atags)
 
     printf("\nRasperry PI Bare Metal OS Initializing...\n");
     printf("r0:%x\t",r0);
-    printf("r1:%x\t",r0);
-    printf("atags:%x\n",r0);
+    printf("r1:%x\t",r1);
+    printf("atags:%x\n",atags);
 
     printf("\nException Level: %d\n", get_el());
 

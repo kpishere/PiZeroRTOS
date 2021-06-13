@@ -42,8 +42,8 @@ get32:
 .globl get_el
 get_el:
 #if RPI_VERSION == 0 // Pi Zero/1 AArch 32
-//    ldr r0, CurrentEL
-//    lsr r0, r0, #2
+	mrs r0, CPSR
+    and r0, r0, #0x0F	;@ mask for lower 4 bits of register for  Mode bits [3:0] PSR
     bx lr
 #else
     mrs x0, CurrentEL

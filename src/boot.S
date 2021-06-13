@@ -17,7 +17,7 @@
 // r2 -> 0x00000100 - start of ATAGS
 // preserve these registers as argument for kernel_main
 _start:
-	// Setup the stack.
+	// Setup the stack (boots in supervisor mode, this is supervisor stack).
 	mov sp, #0x8000
  
 	// Clear out bss.
@@ -37,7 +37,17 @@ _start:
 2:
 	cmp r4, r9
 	blo 1b
- 
+
+    // Set the program Mode
+    mrs r5, CPSR
+    and r5, r5, #0xFFFFFFF0
+    orr r5, r5, #0x0000000F ;@ set system mode
+    msr CPSR, r5
+
+    // Set stack for system mode (only 256 bytes for supervisor mode, not expecting to use it 
+    // but leave some, just in case)
+    mov sp, #0x7E00
+
 	// Call kernel_main
 	ldr r3, =kernel_main
 	blx r3
