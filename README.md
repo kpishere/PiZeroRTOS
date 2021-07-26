@@ -45,7 +45,7 @@ I hope it proves to be a worthy foundation to greater things for you.
 
 - Basic commands to get started :  https://yeah.nah.nz/embedded/pi-jtag-u-boot/
 
-- A command to add to your cfg file to aide in rebooting (you want to load from the JTAG connection into memory directly and then to a software reboot)
+- A command to add to your cfg file to aide in rebooting (you want to load from the JTAG connection into memory directly and then do a software reboot)
 
 ```
 proc pi_reboot {} {
