@@ -39,6 +39,23 @@ I hope it proves to be a worthy foundation to greater things for you.
 - https://www.raspberrypi.org/documentation/hardware/raspberrypi/README.md
 - https://github.com/s-matyukevich/raspberry-pi-os
 
+# I'm seeing interest in this subject, so I leave it here but also add this -- use of JTAG on raspberry pi with the pi as the target 
+
+- Physical connection and config :  https://sysprogs.com/VisualKernel/tutorials/raspberry/jtagsetup/
+
+- Basic commands to get started :  https://yeah.nah.nz/embedded/pi-jtag-u-boot/
+
+- A command to add to your cfg file to aide in rebooting (you want to load from the JTAG connection into memory directly and then to a software reboot)
+
+```
+proc pi_reboot {} {
+  targets rspi.arm
+  halt
+  mww 0x20100024 0x5a000001
+  mww 0x2010001c 0x5a000020
+}
+```
+
 # Update
 
 The project [embox](https://github.com/embox/embox) is hands-down everything this project aspires to be and more.  Regardless, this still has value as a tool for foundational understanding.  Also, I'd add for GUI and direct OpenGL rendering to framebuffer etc, the already embox-tested project [Nuklear](https://github.com/Immediate-Mode-UI/Nuklear) is ideal.
